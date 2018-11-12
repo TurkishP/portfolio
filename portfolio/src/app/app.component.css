@@ -1,0 +1,204 @@
+/* body{
+    background-image: url('../assets/lady_Forest.png');
+    height: 100%;
+    width: 100%;
+    padding: 0;
+
+}
+
+nav{
+    background-image: url('../assets/lady_Forest.png');
+    width: 100%;
+    height: 100%;
+    top:0px;
+
+} */
+
+p{
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+#name{
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    font-family: 'Spicy Rice', cursive;
+}
+
+
+/* nav{
+    position: fixed;
+    top:0px;
+    z-index: 10000;
+    width: 100%;
+    border-bottom: 1px solid ;
+    margin-bottom: -1px;
+    margin-left: -7px;
+    border-color: darkgrey;
+    background-color: white;
+    height: 69px;
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+@keyframes checked-anim {
+    50% {
+        width: 120%;
+        height: 120%;
+    }
+    100% {
+        width: 110%;
+        height: 110%;
+        border-radius: 0;
+    }
+}
+@keyframes not-checked-anim {
+    0% {
+        width: 3000px;
+        height: 3000px;
+    }
+}
+li, a {
+    /* position: absolute; */
+    /* left: 100px; */
+    margin: 75px 0 -55px 100px;
+    color: #03A9F4;
+    font: 14pt "Roboto", sans-serif;
+    font-weight: 700;
+    line-height: 1.8;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    outline: 0;
+    display: none;
+    background-color: #eee;
+
+}
+a{
+    /* margin-left: 200px; */
+    display: block;
+    color: #333;
+    background-color: #eee;
+    transition: all .5s;
+}
+li {
+    width: 230px;
+    /* text-indent: 100px; */
+}
+a:focus {
+    background-color: #eee;
+    margin-left: 300px;
+}
+aside {
+    position: absolute;
+    color: white;
+    top: 35%;
+    right: 10%;
+    text-align: right;
+}
+h1 {
+    line-height: 0;
+    font-size: 4vw;
+    font-weight: 700;
+}
+h3 {
+    float: right;
+    line-height: .3;
+    font-size: 2.5vw;
+    font-weight: lighter;
+}
+h4 {
+    float: left;
+    margin-left: -2%;
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #03A9F4;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+#trigger, #burger, #burger:before, #burger:after {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #03A9F4;
+    width: 30px;
+    height: 5px;
+    transition: .5s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+/* #burger:hover, #burger:before:hover, #burger:after:hover{
+    opacity:1;
+} */
+#trigger {
+    height: 25px;
+    background: none;
+}
+#burger:before {
+    content: " ";
+    top: 10px;
+    right: 0;
+}
+#burger:after {
+    content: " ";
+    top: 20px;
+    right: 0;
+}
+#menu-toggle:checked + #trigger + #burger {
+    top: 25px;
+    transform: rotate(180deg);
+    transition: transform .5s ease;
+}
+
+#menu-toggle:checked + #trigger + #burger:before {
+    width: 20px;
+    top: -2px;
+    right: -7px;
+    transform: rotate(45deg) translateX(-5px);
+    transition: transform .5s ease;
+}
+#menu-toggle:checked + #trigger + #burger:after {
+    width: 20px;
+    top: 2px;
+    right: -7px;
+    transform: rotate(-50deg) translateX(-5px);
+    transition: transform .5s ease;
+}
+#menu {
+    position: absolute;
+  right: -30px;
+  top: -30px;
+    margin: 0; padding: 0;
+    width: 110px;
+    height: 110px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    box-shadow: rgba(0,0,0,0.26);
+    animation: not-checked-anim .2s both;
+    transition: .2s;
+    opacity: 0;
+}
+#menu:hover{
+/* opacity:1; */
+}
+#menu-toggle:checked + #trigger + #burger + #menu {
+    opacity:1;
+
+    animation: checked-anim 1s ease both;
+}
+#menu-toggle:checked + #trigger ~ #menu > li, a {
+    opacity:1;
+
+    display: block;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}

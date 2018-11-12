@@ -1,0 +1,14 @@
+
+html{
+    background:no-repeat url('/assets/lady_Forest.png');
+    background-size: cover;
+    background-position-y: 40%;
+    padding: 0;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+
+}
